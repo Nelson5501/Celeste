@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>{% block title %}!{% endblock %}</title>
+        <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 128 128%22><text y=%221.2em%22 font-size=%2296%22>⚫️</text></svg>">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+        {# Run `composer require symfony/webpack-encore-bundle` to start using Symfony UX #}
+        {% block stylesheets %}
+            {{ encore_entry_link_tags('app') }}
+{#  NAVBAR #}
+
+<nav class="navbar is-transparent">
+  <div class="navbar-brand">
+    <a class="navbar-item" href="/">
+      <b width="112" height="28">Bailleul Celeste</b>
+
+    <div class="navbar-burger">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+     </a>
+  </div>
+
+  <div id="navbarExampleTransparentExample" class="navbar-menu">
+    <div class="navbar-start">
+      <div class="navbar-item has-dropdown is-hoverable">
+        <a class="navbar-link" href="">
+          Docs
+        </a>
+        <div class="navbar-dropdown is-boxed">
+          <a class="navbar-item" href="">
+            Mon Histoire
+          </a>
+                </div>
+      </div>
+    </div>
+
+    <div class="navbar-end">
+      <div class="navbar-item">
+        <div class="field is-grouped">
+          <p class="control">
+            <a class="bd-tw-button button" data-social-network="Twitter" data-social-action="tweet" data-social-target="https://bulma.io" target="_blank" href="https://fr.linkedin.com/">
+              <span class="icon">
+                 <img src="https://cdn-icons-png.flaticon.com/512/179/179330.png?w=996" width="112" height="28">
+              </span>
+              <span>
+                linkedin
+              </span>
+            </a>
+          </p>
+          <p class="control">
+            <a class="button" href="">
+              <span class="icon">
+                <img src="https://cdn-icons-png.flaticon.com/512/1182/1182779.png?w=996" alt="Bulma: a modern CSS framework based on Flexbox" width="112" height="28">
+              </span>
+              <span>curriculum vitae</span>
+            </a>
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</nav>
+
+{# FIN NAVBAR #}
+
+{# WALLPAPER #}
+{# FIN WALLPAPER #}
+
+{# FOOTER #}
+<footer class="footer fixed-bottom">
+  <div class="content has-text-centered">
+    <p>
+      <strong>Website developped</strong> by Nelson Caterinos</a> <a href="https://www.copyright.com/learn/international-copyright/">®</a> all rights reserved
+    </p>
+  </div>
+</footer>
+{# FIN FOOTER #}
+{# PIGINATIONS #}
+{# FIN PIGINATIONS #}
+
+        {% endblock %}
+
+        {% block javascripts %}
+            {{ encore_entry_script_tags('app') }}
+        {% endblock %}
+    </head>
+
+</html>
